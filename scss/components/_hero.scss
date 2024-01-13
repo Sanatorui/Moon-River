@@ -1,0 +1,106 @@
+@import "./cta.scss";
+
+.hero {
+    display: flex;
+    .hero-content {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h2 {
+            color: $clr-white;
+            text-align: center;
+            margin-left: 14rem;
+            font-size: 6.4rem;
+            letter-spacing: 1.92px;
+            position: relative;
+            z-index: 3;
+            &::before {
+                content: "Перейти в раздел";
+                position: absolute;
+                z-index: 2;
+                top: -3.5rem;
+                left: 7rem;
+
+                color: $clr-light_grey;
+                font-family: $font-family-roboto;
+                font-size: 2.4rem;
+                font-weight: 300;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                width: 13rem;
+                height: 0.1rem;
+                bottom: -3rem;
+                right: 12rem;
+
+                background-color: $clr-white;
+            }
+        }
+
+        .side__man {
+            @include pic-side;
+            background-image: url("/img/bg/pexels-the-lazy-artist-gallery-1342609.jpg");
+            margin-right: 3em;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                width: 65rem;
+                height: 45rem;
+                background: $clr-opacity_black;
+            }
+        }
+
+        .side__woman {
+            @include pic-side;
+            background-image: url("/img/bg/pexels-photo-9968473.jpeg");
+            &::before {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                right: 1.7rem;
+                width: 65rem;
+                height: 45rem;
+                background: rgba(39, 39, 39, 0.4);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        .hero-content {
+            h2 {
+                font-size: 3.5rem;
+                &::before {
+                    top: -3.5rem;
+                    left: 2.5rem;
+                    font-size: 1.5rem;
+                }
+                &::after {
+                    width: 12rem;
+                    bottom: -2rem;
+                    right: 4rem;
+                }
+            }
+            .side__man {
+                margin-right: 2.5rem;
+                width: 48rem;
+                &::before {
+                    width: 100%;
+                }
+            }
+            .side__woman {
+                width: 48rem;
+                &::before {
+                    width: 47%;
+                }
+            }
+        }
+    }
+}

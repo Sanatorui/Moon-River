@@ -1,0 +1,85 @@
+@import "./cta.scss";
+
+.map {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: $clr-font;
+    .map__content {
+        height: 55rem;
+        background-color: $clr-font;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .map-content__text {
+            color: $clr-white;
+            font-family: "Forum", serif;
+            padding: 15rem;
+            .map__title {
+                font-weight: 300;
+                font-size: 4.8rem;
+                letter-spacing: 1.44px;
+                max-width: 40rem;
+                @include text-hover;
+                span {
+                    margin-right: 30rem;
+                }
+            }
+            .map__subtitle {
+                font-size: 1.8rem;
+                font-weight: 300;
+                margin: 3.5rem 0;
+                max-width: 40rem;
+                @include text-hover;
+            }
+            .map_input {
+                outline: 0;
+                border: 0;
+                position: relative;
+                width: 40rem;
+                height: 3rem;
+                background-color: $clr-font;
+                color: $clr-grey;
+                border-bottom: $clr-white 1px solid;
+                &::placeholder {
+                    color: $clr-opacity_grey;
+                    font-family: $font-family-roboto;
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                }
+            }
+        }
+        .content__site-map {
+            background-image: url(/img/bg/map.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 70rem;
+            height: 55rem;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .map {
+        .map__content {
+            .map-content__text {
+                padding: 3rem;
+                margin-top: 15%;
+                .map__title {
+                    font-size: 4.8rem;
+                }
+                .map__subtitle {
+                    margin: 3.5rem 0;
+                }
+                .map_input {
+                    width: 38rem;
+                    height: 3rem;
+                    margin-right: 2rem;
+
+                    &::placeholder {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}

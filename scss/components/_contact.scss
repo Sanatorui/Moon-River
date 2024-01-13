@@ -1,0 +1,99 @@
+@import "../components/cta.scss";
+
+.contact {
+    height: 60rem;
+    .contact__content {
+        display: flex;
+        flex-direction: row;
+        .contact-side__text {
+            padding: 15rem;
+            font-family: $font-family-roboto;
+            .contact__title {
+                margin-bottom: 3rem;
+                color: $clr-font;
+                text-align: right;
+                font-size: 1.8rem;
+                letter-spacing: 0.9px;
+                text-transform: uppercase;
+                @include text-hover;
+            }
+            .block__contact-info {
+                margin-bottom: 15rem;
+                .contact__number {
+                    color: $clr-grey;
+                    font-size: 2.2rem;
+                    font-weight: 300;
+                    @include text-hover;
+                }
+            }
+            .block__subscribe {
+                .contact_input {
+                    outline: 0;
+                    border: none;
+                    width: 28rem;
+                    height: 3rem;
+                    border-bottom: $clr-font 1.8px solid;
+                    position: relative;
+                    &::placeholder {
+                        color: $clr-grey;
+                        font-size: 2.2rem;
+                        font-family: $font-family-roboto;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        .contact-side__picture {
+            background-image: url("/img/img/woman.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 50%;
+            height: 60rem;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact {
+        height: 60rem;
+        .contact__content {
+            display: flex;
+            flex-direction: row;
+            .contact-side__text {
+                width: 45rem;
+                padding: 10rem;
+                .contact__title {
+                    width: 40rem;
+                    display: inline-block;
+                    text-align: left;
+                    font-size: 1.5rem;
+                }
+                .block__contact-info {
+                    margin-bottom: 12rem;
+                    .contact__number {
+                        font-size: 2.2rem;
+                    }
+                }
+
+                .block__subscribe {
+                    h3 {
+                        font-size: 1.6rem;
+                    }
+                    .contact_input {
+                        &::placeholder {
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+
+            .contact-side__picture {
+                background-image: url("/img/img/woman.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 52rem;
+                height: 50rem;
+            }
+        }
+    }
+}

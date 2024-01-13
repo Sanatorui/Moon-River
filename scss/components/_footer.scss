@@ -1,0 +1,139 @@
+@import "./cta.scss";
+
+.footer {
+    height: 50rem;
+    width: 100%;
+    background-color: $clr-font;
+
+    .footer-row {
+        .footer-nav {
+            .foter-list {
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                .footer-list__item {
+                    margin: 7rem 4rem;
+
+                    a {
+                        color: $clr-white;
+                        font-family: $font-family-roboto;
+                        font-size: 1.4rem;
+                        font-weight: 450;
+                        letter-spacing: 0.84px;
+                        text-transform: uppercase;
+                        @include text-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-content {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        .footer-logo {
+            margin-right: 5rem;
+        }
+
+        .footer-contact {
+            .contact__title {
+                color: $clr-white;
+                text-align: right;
+                font-family: $font-family-roboto;
+                font-size: 1.4rem;
+                letter-spacing: 0.7px;
+                text-transform: uppercase;
+                @include text-hover;
+            }
+
+            .contact_number {
+                color: $clr-light_grey;
+                font-size: 2.2rem;
+                font-weight: 300;
+                display: block;
+                padding: 2rem 0;
+                @include dark-text_hover;
+            }
+
+            .contact__img-holder {
+                i {
+                    margin: 0 1rem;
+                }
+                .icon-facebook {
+                    font-size: 3.8rem;
+                    color: $clr-white;
+                    transition: 0.3s ease-in-out;
+                    &:hover {
+                        color: #415e9b;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+                .icon-instagram {
+                    font-size: 4rem;
+                    color: $clr-white;
+                    transition: 0.3s ease-in-out;
+                    &:hover {
+                        color: #b839d0;
+                        transition: 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .footer-block__subscribe {
+            margin: 2rem;
+
+            .subscribe__title {
+                padding: 1rem 0;
+                color: $clr-white;
+                font-family: $font-family-roboto;
+                font-size: 1.4rem;
+                letter-spacing: 0.7px;
+                text-transform: uppercase;
+                @include text-hover;
+            }
+
+            .subscribe_input {
+                outline: 0;
+                border: none;
+                width: 28rem;
+                height: 3rem;
+                border-bottom: $clr-white 1.8px solid;
+                position: relative;
+                background-color: $clr-font;
+                color: $clr-grey;
+                position: relative;
+                &::placeholder {
+                    background-color: $clr-font;
+                    font-size: 1.8rem;
+                    font-family: $font-family-roboto;
+                    font-weight: 300;
+                    color: $clr-grey;
+                }
+            }
+
+            .download-holder {
+                margin: 1.5rem 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        .footer-row {
+            .footer-nav {
+                .foter-list {
+                    .footer-list__item {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

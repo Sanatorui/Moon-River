@@ -1,0 +1,100 @@
+$clr-font: #272727;
+$clr-grey: #757575;
+$clr-opacity_black: rgba(39, 39, 39, 0.4);
+$clr-opacity_grey: rgba(255, 255, 255, 0.4);
+$clr-grey_2: #757575;
+$clr-light_grey: #c2c2c2;
+$clr-opacity__white: #e7e7e7;
+$clr-white: #fff;
+$bgc-grey: #ededed;
+$clr-gold: #efc58b;
+$clr-red: red;
+$font-family-roboto: "Roboto", sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 10px;
+}
+body {
+    font-family: "Forum", serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+.price {
+    color: $clr-gold;
+    font-size: 1.8rem;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.54px;
+}
+
+
+@mixin pic-side {
+    width: 65rem;
+    height: 45rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+@mixin product-text {
+    .product__title {
+        color: $clr-font;
+        font-family: $font-family-roboto;
+        font-size: 1.6rem;
+        letter-spacing: 0.8px;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    .product__subtitle {
+        color: $clr-grey_2;
+        font-family: $font-family-roboto;
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+@mixin block-hover {
+    &:hover {
+        transition: 0.4s ease-in-out;
+        background-color: darken($bgc-grey, 20%);
+    }
+}
+@mixin text-hover {
+    &:hover {
+        transition: 0.3s ease-in-out;
+        color: lighten($clr-font, 50%);
+    }
+}
+@mixin dark-text_hover {
+    &:hover {
+        transition: 0.3s ease-in-out;
+        color: lighten($clr-grey, 50%);
+    }
+}
+@mixin text-hover_subtitle {
+    &:hover {
+        transition: 0.3s ease-in-out;
+        color: lighten($clr-red, 25%);
+    }
+}
+@mixin icon-hover {
+    &:hover {
+        transition: 0.3s ease-in-out;
+        background-color: $clr-red;
+    }
+}
